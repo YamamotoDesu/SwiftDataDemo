@@ -1,7 +1,7 @@
 # [SwiftData Basics](https://www.youtube.com/watch?v=krRkm8w22A8)https://www.youtube.com/watch?v=krRkm8w22A8
 
 Model
-```
+```swift
 import Foundation
 import SwiftData
 
@@ -19,7 +19,7 @@ class DataItem: Identifiable {
 ```
 
 App
-```
+```swift
     WindowGroup {
             ContentView()
         }
@@ -28,7 +28,7 @@ App
 
 
 ContentView
-```
+```swift
 import SwiftUI
 import SwiftData
 
