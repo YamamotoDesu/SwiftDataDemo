@@ -10,25 +10,23 @@ import SwiftData
 
 struct ContentView: View {
     
-    @Environment(\.modelContext) private var context
-    
-    @Query private var items: [DataItem]
-    
+    @State private var viewModel = DataItemViewModel()
+
     var body: some View {
         VStack {
             Text("Tap on this button to add data")
             Button("Add an item") {
-                addItem()
+                viewModel.addItem()
             }
             
             List {
-                ForEach (items) { item in
+                ForEach (viewModel.items) { item in
                     
                     HStack {
                         Text(item.name)
                         Spacer()
                         Button {
-                            updateItem(item)
+                            viewModel.updateItem(item)
                         } label: {
                             Image(systemName: "arrow.triangle.2.circlepath")
                         }
@@ -36,30 +34,11 @@ struct ContentView: View {
                 }
                 .onDelete { indexes in
                     for index in indexes {
-                        deleteItem(items[index])
+                        viewModel.deleteItem(viewModel.items[index])
                     }
                 }
             }
         }
         .padding()
     }
-    
-    func addItem() {
-        let item = DataItem(name: "Test Item")
-        context.insert(item)
-    }
-    
-    func deleteItem(_ item: DataItem) {
-        context.delete(item)
-    }
-    
-    func updateItem(_ item: DataItem) {
-        item.name = "Updated Text Item"
-        
-        try? context.save()
-    }
-}
-
-#Preview {
-    ContentView()
 }
