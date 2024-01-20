@@ -1,7 +1,6 @@
-# [SwiftData Basics](https://www.youtube.com/watch?v=krRkm8w22A8)
-
 <img width="300" alt="image" src="https://github.com/YamamotoDesu/SwiftDataDemo/assets/47273077/c345e504-0112-4431-9849-5611f70cc6ad">
 
+# [SwiftData Basics](https://www.youtube.com/watch?v=krRkm8w22A8)
 Model
 ```swift
 import Foundation
