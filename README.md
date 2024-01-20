@@ -1,4 +1,4 @@
-# [SwiftData Basics in 15 minutes](https://www.youtube.com/watch?v=krRkm8w22A8)https://www.youtube.com/watch?v=krRkm8w22A8
+# [SwiftData Basics](https://www.youtube.com/watch?v=krRkm8w22A8)https://www.youtube.com/watch?v=krRkm8w22A8
 
 Model
 ```
